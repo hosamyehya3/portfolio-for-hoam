@@ -93,14 +93,9 @@ nav a:hover::before{
  .icon-background a:hover{
    background-color: #6C64F2  !important;
  }
-.my-gearBtn:focus {
-width: 25%;
-height: 650px;
-background-color: hsl(0, 3%, 88%);
-border: 2px solid #000;
-border-radius: 10px;
+.my-gearBtn{
+}
 
-}
-.my-gearBtn:focus i{
-    display: none;
-}
+
+
+
