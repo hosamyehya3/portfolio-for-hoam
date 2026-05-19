@@ -23,7 +23,13 @@ var commerical = document.getElementById("commerical");
 var allBtn = document.getElementById("allBtn");
 var experience = document.querySelectorAll(".exp");
 var experiencetitle = document.getElementById("experience-title");
-
+var footer =document.getElementById("footer");
+var changeBg =document.querySelector(".changeBg");
+var textcolor = document.querySelectorAll(".textcolor span");
+var changeFont = document.getElementById("changeFont");
+var changeBgHead = document.querySelector(".color-bg div");
+var changeBgHeadRed = document.querySelector(".red");
+var bgImg = document.getElementById("bgImg");
 click.innerHTML=`
        <div class="coll new">
     <div class="setting shape">
@@ -52,11 +58,17 @@ btnElement.addEventListener("click" , function(){
   for (var i = 0; i < experience.length; i++) {
       experience[i].classList.add("white" , "black")
   }
-experiencetitle.classList.add("black");
+for (var i = 0; i < textcolor.length; i++) {
+ textcolor[i].classList.add("black")
+  
+}
 
+experiencetitle.classList.add("black");
+footer.classList.remove("mainbg" )
 for( var i = 0 ; i < grid.length ; i++){
      grid[i].classList.add("white" , "black")
 }
+changeBg.classList.add("white");
      portfolio.classList.add("white" , "black");
         firstCharacter.classList.add("black");
         bgbatch.classList.add("white");
@@ -90,9 +102,13 @@ about.classList.add("my-class");
     } 
     else{
 
-
+footer.classList.add("mainbg" )
+changeBg.classList.remove("white");
 experiencetitle.classList.remove("black");
-
+for (var i = 0; i < textcolor.length; i++) {
+ textcolor[i].classList.remove("black")
+  
+}
   for (var i = 0; i < experience.length; i++) {
       experience[i].classList.remove("white" , "black")
     
@@ -936,3 +952,20 @@ allBtn.addEventListener("click" , function(){
   
   `
 })
+changeFont.addEventListener("click" , function(){
+ document.body.classList.add("changFont")
+})
+changeFont.nextElementSibling.addEventListener("click" , function(){
+   document.body.classList.remove("changFont")
+})
+
+  changeBgHead.addEventListener("click" , function(){
+bgImg.classList.replace("redbg" , "bg-img");
+  })
+  changeBgHeadRed.addEventListener("click" , function(){
+    bgImg.classList.replace("bg-img" , "redbg");
+
+  })
+
+
+
