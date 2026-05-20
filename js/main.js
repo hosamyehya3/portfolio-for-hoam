@@ -30,6 +30,7 @@ var changeFont = document.getElementById("changeFont");
 var changeBgHead = document.querySelector(".color-bg div");
 var changeBgHeadRed = document.querySelector(".red");
 var bgImg = document.getElementById("bgImg");
+var readyToStart = document.getElementById("readyToStart");
 click.innerHTML=`
        <div class="coll new">
     <div class="setting shape">
@@ -62,7 +63,8 @@ for (var i = 0; i < textcolor.length; i++) {
  textcolor[i].classList.add("black")
   
 }
-
+readyToStart.classList.remove("mainbg" , "black");
+readyToStart.classList.add( "black");
 experiencetitle.classList.add("black");
 footer.classList.remove("mainbg" )
 for( var i = 0 ; i < grid.length ; i++){
@@ -101,6 +103,8 @@ about.classList.add("my-class");
                 }
     } 
     else{
+readyToStart.classList.add("mainbg" , "black");
+readyToStart.classList.remove("black");
 
 footer.classList.add("mainbg" )
 changeBg.classList.remove("white");
@@ -966,6 +970,5 @@ bgImg.classList.replace("redbg" , "bg-img");
     bgImg.classList.replace("bg-img" , "redbg");
 
   })
-
 
 
